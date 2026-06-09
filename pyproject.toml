@@ -1,0 +1,79 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ocr-pdf-cli"
+version = "0.1.0"
+description = "Ferramenta CLI para converter PDFs escaneados em documentos pesquisáveis."
+readme = "README.md"
+requires-python = ">=3.11"
+
+authors = [
+    { name = "Marcus Faria" }
+]
+
+license = { text = "MIT" }
+
+keywords = [
+    "ocr",
+    "pdf",
+    "tesseract",
+    "paddleocr",
+    "cli",
+]
+
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+    "typer>=0.16.0",
+    "rich>=14.0.0",
+    "pillow>=11.0.0",
+    "pypdfium2>=4.30.0",
+    "pytesseract>=0.3.13",
+    "reportlab>=4.4.0",
+    "pydantic>=2.11.0",
+    "numpy>=1.26"
+]
+
+[project.optional-dependencies]
+
+easyocr = [
+    "easyocr>=1.7.2",
+]
+
+paddleocr = [
+    "paddleocr>=3.1.0",
+]
+
+dev = [
+    "pytest>=8.4.0",
+    "pytest-cov>=6.2.0",
+    "ruff>=0.12.0",
+    "mypy>=1.17.0",
+]
+
+[project.scripts]
+ocr-pdf = "ocr_pdf_cli.cli.main:app"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
