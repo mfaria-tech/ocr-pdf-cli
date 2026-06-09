@@ -254,19 +254,19 @@ Exemplo:
 
 ```text
 ocr-pdf-cli/
-├── docs/
-├── tests/
-├── input/
-├── output/
-└── src/
-    └── ocr_pdf_cli/
-        ├── cli/
-        ├── config/
-        ├── core/
-        ├── engines/
-        ├── exporters/
-        ├── models/
-        └── utils/
++-- docs/
++-- tests/
++-- input/
++-- output/
++-- src/
+    +-- ocr_pdf_cli/
+        +-- cli/
+        +-- config/
+        +-- core/
+        +-- engines/
+        +-- exporters/
+        +-- models/
+        +-- utils/
 ```
 
 ---
