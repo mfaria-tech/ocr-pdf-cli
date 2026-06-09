@@ -36,8 +36,8 @@ Nenhum dado é enviado para serviços externos.
 | Engine    | Status |
 | --------- | ------ |
 | Tesseract | ✅      |
-| EasyOCR   | ✅      |
-| PaddleOCR | ✅      |
+| EasyOCR   | ❌      |
+| PaddleOCR | ❌      |
 
 A engine padrão é o Tesseract.
 
@@ -140,23 +140,6 @@ pkg install tesseract
 Instale através do projeto UB Mannheim:
 
 https://github.com/UB-Mannheim/tesseract/wiki
-
----
-
-## Verificando a instalação
-
-```bash
-ocr-pdf verify
-```
-
-Exemplo:
-
-```text
-✓ Python
-✓ Tesseract
-✓ EasyOCR
-✗ PaddleOCR
-```
 
 ---
 
